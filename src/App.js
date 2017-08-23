@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import router from './router.js';
+
 import './App.css';
 
 export default class App extends Component {
@@ -10,10 +13,11 @@ export default class App extends Component {
                <nav className='nav'>
                    <div>WestSide University</div> 
                    <div className='link-wrap'>
-                        <div className='links'>Home</div>
-                        <div className='links'>About</div> 
+                        <Link to='/' className='links'>Home</Link>
+                        <Link to='/about' className='links'>About</Link> 
                    </div>  
                </nav>
+               { router }
             
            </div> 
         )
